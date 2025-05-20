@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd Year Subjects - R22 CSE & AIML</title>
+    <link rel="stylesheet" href=second_year.css">
+</head>
+<body>
+    <button class="back-btn" onclick="window.location.href='cse_aiml.html'">← Back to Years</button>
+
+    <div class="header">
+        <h1>2nd Year Subjects</h1>
+        <p>Select a subject to view materials</p>
+    </div>
+
+    <div class="subject-container">
+        <button class="subject-btn" onclick="https://onecompiler.com/java">Operating Systems (OS)</button>
+        <button class="subject-btn" onclick="showSubject('ds')">Data Structures (DS)</button>
+        <button class="subject-btn" onclick="showSubject('msf')">Mathematical Foundations (MSF)</button>
+        <button class="subject-btn" onclick="showSubject('dm')">Discrete Mathematics (DM)</button>
+        <button class="subject-btn" onclick="showSubject('java')">Java Programming</button>
+        <button class="subject-btn" onclick="showSubject('ai')">Artificial Intelligence (AI)</button>
+        <button class="subject-btn" onclick="showSubject('dbms')">Database Systems (DBMS)</button>
+        <button class="subject-btn" onclick="showSubject('atcd')">Automata Theory (ATCD)</button>
+        <button class="subject-btn" onclick="showSubject('coa')">Computer Architecture (COA)</button>
+        <button class="subject-btn" onclick="showSubject('se')">Software Engineering (SE)</button>
+    </div>
+
+    <script>
+        function showSubject(subject) {
+            // In a real implementation, this would open subject-specific content
+            alert("Opening materials for " + getSubjectName(subject));
+            // window.location.href = "subjects/" + subject + ".html"; // Uncomment for actual implementation
+        }
+        
+        function getSubjectName(code) {
+            const subjects = {
+                'os': 'Operating Systems',
+                'ds': 'Data Structures',
+                'msf': 'Mathematical Foundations',
+                'dm': 'Discrete Mathematics',
+                'java': 'Java Programming',
+                'ai': 'Artificial Intelligence',
+                'dbms': 'Database Systems',
+                'atcd': 'Automata Theory',
+                'coa': 'Computer Architecture',
+                'se': 'Software Engineering'
+            };
+            return subjects[code] || code;
+        }
+    </script>
+</body>
+</html>

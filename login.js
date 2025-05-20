@@ -17,10 +17,9 @@
             if (password === '') {
                 document.getElementById('passwordError').textContent = 'Password is required';
                
-            } else if (password !== '123') {
-                document.getElementById('passwordError').textContent = 'Invalid  Username or password';
+            } 
                
-            }
+            
             
             if (username==="russian" &&password==="6000") {
                 // Redirect to welcome page

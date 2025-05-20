@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st Year Subjects - R22 CSE & AIML</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="window.location.href='cse_aiml.html'">← Back to Years</button>
+
+    <div class="header">
+        <h1>1st Year Subjects</h1>
+        <p>Select a subject to view materials</p>
+    </div>
+
+    <div class="subject-container">
+        <button class="subject-btn" onclick="showSubject('M1')">Mathematics-I (M1)</button>
+        <button class="subject-btn" onclick="showSubject('M2')">Mathematics-II (M2)</button>
+        <button class="subject-btn" onclick="showSubject('physics')">Physics</button>
+        <button class="subject-btn" onclick="showSubject('chemistry')">Chemistry</button>
+        <button class="subject-btn" onclick="showSubject('pps')">Programming for Problem Solving (PPS)</button>
+        <button class="subject-btn" onclick="showSubject('drawing')">Engineering Drawing</button>
+        <button class="subject-btn" onclick="showSubject('bee')">Basic Electrical Engineering (BEE)</button>
+        <button class="subject-btn" onclick="showSubject('edc')">Electronic Devices and Circuits (EDC)</button>
+        <button class="subject-btn" onclick="showSubject('english')">English</button>
+    </div>
+
+    <script>
+        function showSubject(subject) {
+            // In a real implementation, this would open subject-specific content
+            alert("Opening materials for " + getSubjectName(subject));
+            // window.location.href = subject + ".html"; // Uncomment for actual implementation
+        }
+        
+        function getSubjectName(code) {
+            const subjects = {
+                'M1': 'Mathematics-I',
+                'M2': 'Mathematics-II',
+                'physics': 'Physics',
+                'chemistry': 'Chemistry',
+                'pps': 'Programming for Problem Solving',
+                'drawing': 'Engineering Drawing',
+                'bee': 'Basic Electrical Engineering',
+                'edc': 'Electronic Devices and Circuits',
+                'english': 'English'
+            };
+            return subjects[code] || code;
+        }
+    </script>
+</body>
+</html>
